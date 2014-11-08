@@ -25,15 +25,33 @@
     }, 1);
   })();
 </script>
- <a href='JavaScript:PopUpWindow("http://www.keysurvey.com/f/706305/10fc/");'>Invite your website visitors to click here and take your survey</a>
-        <script language='JavaScript' type="text/javascript">
-          function PopUpWindow(fsName) {
-            self.name = 'surveyWindow';
-            OpenWindow = window.open(fsName, 'newWindow', 'toolbar=no,scrollbars=yes,resizable=yes');
-            OpenWindow.focus();
+ <!-- Start POP-UP  (Powered by KeySurvey) -->
+        <form name='fsName'
+              action='http://www.keysurvey.com/f/706305/10fc/?Popup=1'
+              enctype='multipart/form-data'
+              method='POST'>
+          <input type='hidden' name='Popup' value='1'/>
+        </form>
+        <script type='text/javascript'>
+          var rnd = Math.random();
+          var max =25;
+          var enableip = "";
+          var disableip = "";
+          if (rnd * max < 1) {
+            document.write("<sc" + "ript");
+            document.write(" language='javasc" + "ript' type='text/javasc" + "ript'");
+            document.write(" src='http://www.keysurvey.com/Member/Public/popup_enable.jsp?surveyId=706305&Pwd=10fc");
+            document.write("&enableip=" + enableip + "&disableip=" + disableip + "'><" + "/sc" + "ript>");
+          }
+          function startPopUp() {
+            var wn = "new" + (Math.round(Math.random() * 1000000));
+            window.open("", wn, 'toolbar=yes,scrollbars=yes,resizable=yes,width=720,height=400,left=16,top=16');
+            document.fsName.target = wn;
+            document.fsName.submit();
           }
         </script>
-
+        <!-- END POP-UP   (Powered by KeySurvey) -->
+      
     <div class="wrapper">
       <header>
         <h1 class="header">My-first-repository</h1>
